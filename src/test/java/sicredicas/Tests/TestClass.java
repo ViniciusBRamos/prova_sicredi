@@ -1,4 +1,4 @@
-package sicredicas;
+package sicredicas.Tests;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+
+import sicredicas.Pages.GroceryPage;
+import sicredicas.Settings.CreatedWebDriver;
 
 public class TestClass {
 	
@@ -42,10 +45,10 @@ public class TestClass {
 		.returnMessage()
 		;
 		
-		assertEquals("Your data has been successfully stored into the database.", result);
+		assertTrue(result.contains("Your data has been successfully stored into the database."));
 	}
 	
-	
+	@Test
 	public void desafioTwo() {
 		String fullProcess = grocery.selectVersion("Bootstrap V4 Theme")
 		.clickButtonAddCustomer()
@@ -73,7 +76,7 @@ public class TestClass {
 		assertEquals("Your data has been successfully deleted from the database.", fullProcess);
 	}
 	
-//	@After
+	@After
 	public void tearDown() {
 		navegador.close();
 	}

@@ -1,4 +1,4 @@
-package sicredicas;
+package sicredicas.Settings;
 
 import java.util.concurrent.TimeUnit;
 

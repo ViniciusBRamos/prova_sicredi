@@ -1,4 +1,4 @@
-package sicredicas;
+package sicredicas.Pages;
 
 import java.util.List;
 
